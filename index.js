@@ -2,6 +2,8 @@ const express = require('express')
 const cors = require('cors')
 const path = require('path')
 
+require("dotenv").config()
+
 const app = express()
 
 const fs = require('fs')
@@ -78,7 +80,7 @@ app.get('/test', async (req, res)=> {
     })
 })
 
+const port = process.env.PORT || 3000;
 
 
-
-app.listen(3333, ()=> console.log())
+app.listen(port, ()=> console.log())
