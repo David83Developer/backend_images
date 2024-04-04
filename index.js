@@ -20,7 +20,7 @@ app.use((_, res, next)=> {
 
 const uploadImage = require('./multer/multer.js')
 
-app.get('/', (res)=> {
+app.get('/', (req, res)=> {
     res.json('hello world!')
 })
 
