@@ -20,6 +20,10 @@ app.use((_, res, next)=> {
 
 const uploadImage = require('./multer/multer.js')
 
+app.get('/', (res)=> {
+    res.json('hello world!')
+})
+
 app.get('/listimages', async (req, res) => {
     await Image.findAll()
     .then((images) => {
